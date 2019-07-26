@@ -1,3 +1,7 @@
-SAMPLE CODE 
+<?php
+include 'db_connection.php';
+$conn = OpenCon();
+echo "Connected Successfully";
 
-Create Database Table
+CloseCon($conn);
+?>
