@@ -1,3 +1,14 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>GBI - <?php echo h($page_title); ?></title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,900" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="<?php echo url_for('style.css'); ?>" />
+  </head>
+  
+  
 <?php
 include 'db_connection.php';
 $conn = OpenCon();
