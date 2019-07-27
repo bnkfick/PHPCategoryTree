@@ -13,32 +13,7 @@
       <h1><a href='ficktastic.com'>barbara fick</a></h1>
     </div>
   
-<?php
-include 'db_connection.php';
-$conn = OpenCon();
-echo 'Connected to the Database Successfully Yo';
-?>
 
-<?php 
-
-function categoryTree($subItemOfID, $sub_mark){
-
-    global $conn;
-    $query = $conn->query("SELECT * FROM categories WHERE subItemOfID = $subItemOfID ORDER BY Item ASC");
-
-    if($query->num_rows > 0){
-         while($row = $query->fetch_assoc()){
-            echo '<br />';
-            echo $sub_mark.$row['Item'];
-            categoryTree($row['itemID'], $sub_mark.'---');
-        }
-    }
-  }
-
-?>
-
-
-<?php categoryTree(0, ''); ?>
 
 <?php
 echo '
